@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Promo</title>
 </head>
 <body>
+    <% for (const promo of promos){  %> 
+        <div>
+            <span> <%= promo.name %>  </span> 
+            <a href="http:/localhost:3000/promo/<%= promo.id%>">   <%= promo.id %></a>
+        </div>
+    <% } %>
     <img src="http://localhost:3000/logo.png" alt="logo">
 </body>
 </html>

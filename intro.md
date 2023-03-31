@@ -65,3 +65,33 @@ Le .env est un fichier caché d'environnement, il a pour objectif de contenir de
 
 NB : on ne push pas le .env sur github (donc on le rajoute dans gitignore)
 NB2 : dans le projet qu'on va voir en saison 4, on va utiliser dotenv pour lire le fichier .env
+
+
+## Ajouter un dépôt distant à notre projet local
+
+une fois que votre projet git a été initialisé en local (git init git add git commit ...), vous pouvez rajouter un dépôt distant à ce projet, pour se faire :
+
+1 - Créer un dépôt en ligne (github, bitbucket, gitlab ...)
+2 - Copier l'adresse SSH du dépôt en ligne
+3 - dans le dossier du projet, utiliser la commande : `git remote add origin adresseDuDépot` (/!\ origin représente le nom du dépôt distant, on aurait pû l'appeler Michel, mais généralement le dépôt distant est nommé comme ça)
+3 - 1 - pour vérifier que ovtre dépôt distant a bien été rajouté : `git remote -v` va vous afficher le nom et l'adresse du dépôt distant
+4 - vous pouvez maintenant push, vous aurez surement une erreur vous indiquant que le lien n'est pas établi, par la même occasion git va vous suggérer une commande que vous pouvez copier pour faire un push
+
+
+
+#### Points importants de la journée
+
+- Organisation pré-production (juste la compréhension)
+  - user stories
+  - kanban
+  - sprint poker
+
+- Organisation du code 
+  - modèle (soon)
+  - vue
+  - controlleur
+  - routeur
+  - public
+  - data
+
+- variables d'environnement (.env)

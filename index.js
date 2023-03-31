@@ -23,6 +23,11 @@ app.use(express.static("app/public"));
 // middleware router
 app.use(router);
 
+// si aucune route n'a été validée dans le routeur, on arrivera à ce middleware : 
+app.use( (req, res) => {
+    res.status(404).render('404');
+})
+
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
 })
