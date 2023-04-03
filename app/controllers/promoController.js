@@ -9,7 +9,7 @@ const promoController = {
     // affiche la liste des promos
     promoList: (req, res) => {
         
-        res.render('promo', {promos});
+        res.render('promo', {promos, title: 'Liste des promotions'});
     },
 
     promoDetail: (req, res, next) => {
@@ -26,7 +26,7 @@ const promoController = {
         console.log("plop");
 
         // on fait un render avec les données extraites
-        res.render('promoDetail', {promo: foundPromo});
+        res.render('promoDetail', {promo: foundPromo, title: `Détail de la promo ${foundPromo.name}`});
     }
 }
 

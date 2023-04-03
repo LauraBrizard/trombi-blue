@@ -4,7 +4,7 @@
 const { Router } = require('express');
 const promoController = require('./controllers/promoController');
 const mainController = require('./controllers/mainController');
-
+const studentController = require('./controllers/studentController');
 
 const router = Router();
 
@@ -13,7 +13,7 @@ router.get('/', mainController.homePage);
 router.get('/promos', promoController.promoList);
 router.get('/promo/:id', promoController.promoDetail);
 // students
-
+router.get('/promo/:id/students', studentController.studentList)
 
 
 module.exports = router;
